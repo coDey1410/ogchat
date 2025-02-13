@@ -144,38 +144,45 @@ const Sidebar = () => {
         <div className="mt-4">
           <h3 className="text-sm font-medium text-zinc-500 px-3">Groups</h3>
           <div className="overflow-y-auto w-full py-3">
-            {groups.map((group) => (
-              <button
-                key={group._id}
-                onClick={() => {
-                  setSelectedGroup(group);
-                  setIsBroadcastSelected(false);
-                  setSelectedUser(null);
-                }}
-                className={`w-full p-3 flex items-center gap-3 
-                hover:bg-base-300 transition-colors
-                ${
-                  selectedGroup?._id === group._id
-                    ? "bg-base-300 ring-1 ring-base-300"
-                    : ""
-                }
-                `}
-              >
-                <div className="relative">
-                  <img
-                    src={group.groupPic || "/group.png"}
-                    alt={group.groupName}
-                    className="size-12 object-cover rounded-full"
-                  />
-                </div>
-                <div className="block text-left min-w-0">
-                  <div className="font-medium truncate">{group.groupName}</div>
-                  <div className="text-sm text-zinc-400">
-                    {group.members.length} members
+            {groups?.length > 0 ? (
+              groups.map((group) => (
+                <button
+                  key={group._id}
+                  onClick={() => {
+                    console.log("Clicked Group:", group);
+                    setSelectedGroup(group);
+                    setIsBroadcastSelected(false);
+                    setSelectedUser(null);
+                  }}
+                  className={`w-full p-3 flex items-center gap-3 
+        hover:bg-base-300 transition-colors
+        ${
+          selectedGroup?._id === group._id
+            ? "bg-base-300 ring-1 ring-base-300"
+            : ""
+        }
+      `}
+                >
+                  <div className="relative">
+                    <img
+                      src={group.groupPic || "/group.png"}
+                      alt={group.groupName}
+                      className="size-12 object-cover rounded-full"
+                    />
                   </div>
-                </div>
-              </button>
-            ))}
+                  <div className="block text-left min-w-0">
+                    <div className="font-medium truncate">
+                      {group.groupName}
+                    </div>
+                    <div className="text-sm text-zinc-400">
+                      {group.members?.length} members
+                    </div>
+                  </div>
+                </button>
+              ))
+            ) : (
+              <p>No groups available</p>
+            )}
           </div>
         </div>
       </div>
