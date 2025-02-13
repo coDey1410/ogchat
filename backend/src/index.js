@@ -24,6 +24,8 @@ app.use(
     credentials: true,
   })
 );
+app.use("/api/auth", authRoutes);
+app.use("/api/messages", messageRoutes);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
@@ -37,7 +39,5 @@ server.listen(PORT, () => {
   connectDB();
 });
 
-app.use("/api/auth", authRoutes);
-app.use("/api/messages", messageRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/group", groupRoutes);
