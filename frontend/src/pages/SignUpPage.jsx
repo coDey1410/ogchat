@@ -49,12 +49,17 @@ const SignUpPage = () => {
           {/*LOGO */}
           <div className="text-center mb-8">
             <div className="flex flex-col items-center gap-2 group">
-              <div className="size-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <MessageSquare className="size-6 text-primary" />
+              <div className="size-23 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors overflow-hidden">
+                <img
+                  src="https://www.doubloin.com/wp-content/uploads/2023/09/turn-digital-arti-into-nft.webp" // Replace with your image URL
+                  alt="User Avatar"
+                  className="size-20 rounded-full object-cover"
+                />
               </div>
+
               <h1 className="text-2xl font-bold mt-2">Create Account</h1>
               <p className="text-base-content/60">
-                Get Started With Your Free Account
+                Create Acc for OG Chat and become a OG guy
               </p>
             </div>
           </div>
@@ -111,7 +116,7 @@ const SignUpPage = () => {
                 <input
                   type={showPassword ? "text" : "password"}
                   className={`input input-bordered w-full pl-10`}
-                  placeholder="••••••••"
+                  placeholder="******"
                   value={formData.password}
                   onChange={(e) =>
                     setFormData({ ...formData, password: e.target.value })

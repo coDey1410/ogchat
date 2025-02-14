@@ -20,7 +20,7 @@ const LoginPage = () => {
   return (
     <div className="h-screen flex justify-center items-center">
       {/* Centered Form */}
-      <div className="w-full max-w-md p-6 sm:p-12 bg-zinc-300 shadow-lg rounded-lg">
+      <div className="w-full max-w-md p-6 sm:p-12 bg-zinc-200 shadow-lg rounded-lg">
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="flex flex-col items-center gap-2 group">
@@ -28,7 +28,13 @@ const LoginPage = () => {
               className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20
             transition-colors"
             >
-              <AtSign className="w-6 h-6 text-primary" />
+              <div className="size-25 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors overflow-hidden">
+                <img
+                  src="https://www.doubloin.com/wp-content/uploads/2023/09/turn-digital-arti-into-nft.webp" // Replace with your image URL
+                  alt="User Avatar"
+                  className="size-25 rounded-full object-cover"
+                />
+              </div>
             </div>
             <h1 className="text-2xl font-bold mt-2 text-black">
               Let's Start Chatting

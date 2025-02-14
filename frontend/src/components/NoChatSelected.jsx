@@ -1,4 +1,4 @@
-import { MessageSquare } from "lucide-react";
+import { MessageSquareHeart } from "lucide-react";
 
 const NoChatSelected = () => {
   return (
@@ -9,18 +9,16 @@ const NoChatSelected = () => {
           <div className="relative">
             <div
               className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center
-             justify-center animate-bounce"
+             justify-center animate-spin"
             >
-              <MessageSquare className="w-8 h-8 text-primary " />
+              <MessageSquareHeart className="w-8 h-8 text-primary " />
             </div>
           </div>
         </div>
 
         {/* Welcome Text */}
-        <h2 className="text-2xl font-bold">Welcome to talkify!</h2>
-        <p className="text-base-content/60">
-          Let's Start a conversation
-        </p>
+        <h2 className="text-2xl font-bold">Ajaoo OG Chat mein</h2>
+        <p className="text-base-content/60">Toh Chaliye suru krte hai xD</p>
       </div>
     </div>
   );
