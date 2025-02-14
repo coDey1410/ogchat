@@ -9,8 +9,8 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-green-400 to-blue-400">
-      <div className="flex items-center justify-center pt-20 px-4">
-        <div className="bg-indigo-800 rounded-lg shadow-cl w-full max-w-6xl h-[calc(100vh-8rem)]">
+      <div className="flex items-center justify-center pt-20 px-4  text-gray-900">
+        <div className="bg-indigo-200 rounded-lg shadow-cl w-full max-w-6xl h-[calc(100vh-8rem)]">
           <div className="hidden md:flex h-full rounded-lg overflow-hidden">
             <Sidebar />
             {!selectedUser && !isBroadcastSelected && !selectedGroup ? (
